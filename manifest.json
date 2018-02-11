@@ -1,11 +1,14 @@
 {
-    "name": "NeuralAction_Interaction",
-    "description" : "NeuralAction Interaction",
+    "name": "🌐NeuralAction Chrome Client",
+    "description" : "NeuralAction Chrome Client gets some html objects like a button, input...and more.😁",
     "version": "1.0",
     "manifest_version": 2,
     "browser_action": {
       "default_popup": "index.html",
       "default_icon": "neuralaction_circle_ci.png"
+    },
+    "icons": {
+      "128": "neuralaction_circle_ci.png"
     },
     "permissions": ["tabs", "<all_urls>"],
     "commands": {
