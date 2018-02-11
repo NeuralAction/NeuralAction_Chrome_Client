@@ -20,11 +20,11 @@ function DOMtoString(document_root) {
 
     
     for (var i=0, max=all.length; i < max; i++) {
-        if(all[i].localName == "button" || (all[i].localName == "input" && all[i].type != "hidden") || all[i].localName == "textarea") {
+        if(all[i].localName == "button" || (all[i].localName == "input" && all[i].type != "hidden") || all[i].localName == "textarea" || (all[i].localName == "a" && all[i].href != "")) {
 
         var elemRect = all[i].getBoundingClientRect();
 
-         html += all[i].outerHTML+ "\n\nwidth : " + getStyle(all[i], "width") + " height : " + getStyle(all[i], "height") + " left : " + elemRect.left + " top : " + elemRect.top + "\n\n";
+         html += all[i].outerHTML+ "\n\nwidth : " + all[i].offsetWidth + " height : " + getStyle(all[i], "height") + " left : " + elemRect.left + " top : " + elemRect.top + "\n\n";
         }
     }
 
