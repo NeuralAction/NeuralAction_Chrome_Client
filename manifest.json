@@ -1,8 +1,9 @@
 {
     "name": "🌐NeuralAction Chrome Client",
-    "description" : "NeuralAction Chrome Client gets some html objects like a button, input...and more.😁",
+    "description" : "NeuralAction Chrome Client send some html objects like a button, input...and more to native client program.😁",
     "version": "1.0",
     "manifest_version": 2,
+    "background_page": "index.html",
     "browser_action": {
       "default_popup": "index.html",
       "default_icon": "neuralaction_circle_ci.png"
@@ -10,14 +11,5 @@
     "icons": {
       "128": "neuralaction_circle_ci.png"
     },
-    "permissions": ["tabs", "<all_urls>"],
-    "commands": {
-      "_execute_browser_action": {
-        "suggested_key": {
-          "default": "Ctrl+Shift+F",
-          "mac": "MacCtrl+Shift+F"
-        },
-        "description": "Opens index.html"
-      }
-    }
+    "permissions": ["tabs", "<all_urls>", "nativeMessaging"]
   }
